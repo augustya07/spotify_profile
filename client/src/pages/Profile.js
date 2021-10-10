@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { getCurrentUserProfile } from "../spotify";
-import Loader from '../components/Loader'
 
 const Login = ({}) => {
   const [profile, setProfile] = useState(null);

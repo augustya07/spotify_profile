@@ -184,3 +184,9 @@ export const getAudioFeaturesForTracks = ids => {
 export const getRecommendations = () => {
   return axios.get(`/recommendations/`)
 }
+
+
+export const geAlbumById = albumId => {
+  return axios.get(`albums/${albumId}`)
+
+}
