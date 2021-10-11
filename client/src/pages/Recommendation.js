@@ -1,6 +1,5 @@
 import react, {useState, useEffect} from "react";
-import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
+
 import {getRecommendations} from "../spotify";
 import {catchErrors} from "../utils";
 import axios from "axios";
