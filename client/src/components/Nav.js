@@ -29,7 +29,8 @@ const Nav = () => {
                     </SubMenu>
 
                     <Menu.Item key="mail" icon={<MailOutlined/>}>
-                        Navigation One
+                        <Link to="/recommendation">Recommendation </Link>
+
                     </Menu.Item>
 
 

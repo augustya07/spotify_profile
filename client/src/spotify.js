@@ -188,5 +188,8 @@ export const getRecommendations = () => {
 
 export const geAlbumById = albumId => {
   return axios.get(`albums/${albumId}`)
+}
 
+export const geAlbumByTracks = albumId => {
+  return axios.get(`albums/${albumId}/tracks`)
 }

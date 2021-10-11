@@ -41,21 +41,12 @@ function App() {
                 <>
                     <Router>
                         <ScrollToTop/>
-                      <Nav/>
+                        <Nav/>
                         <Switch>
-                            <Route path="/profile">
-                                <Profile/>
-                            </Route>
-
-                            <Route path="/tracks">
-                                <Tracks/>
-                            </Route>
-                            <Route path="/album">
-                                <Album/>
-                            </Route>
-                            <Route path="/">
-                                <Album/>
-                            </Route>
+                            <Route exact path="/recommendations" component={Recommendation}/>
+                            <Route exact path="/album" component={Album}/>
+                            <Route exact path="/tracks" component={Tracks}/>
+                            <Route exact path="/profile" component={Profile}/>
                         </Switch>
                     </Router>
                 </>
