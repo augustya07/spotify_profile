@@ -1,11 +1,10 @@
 import react, {useState, useEffect} from "react";
-import {Layout, Menu} from 'antd';
-import {MailOutlined, AppstoreOutlined, SettingOutlined} from '@ant-design/icons';
 import {Link} from 'react-router-dom'
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SettingsIcon from '@mui/icons-material/Settings';
 
-
-const {SubMenu} = Menu;
-const {Header} = Layout;
+    const {SubMenu} = Menu;
+    const {Header} = Layout;
 
 
 const Nav = () => {

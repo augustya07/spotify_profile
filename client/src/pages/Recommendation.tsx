@@ -1,5 +1,4 @@
 import react, {useState, useEffect} from "react";
-import {Card, Row, Col, Divider, Layout, Space} from 'antd';
 import {getRecommendations} from "../spotify";
 import {catchErrors} from "../utils";
 import axios from "axios";
