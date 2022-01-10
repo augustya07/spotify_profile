@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useGetUserTopSongsQuery } from "../service/spotifyApi";
+import { useGetUserFollowedArtistQuery } from "../service/spotifyApi";
 
-const Tracks = () => {
-  const { data, isLoading } = useGetUserTopSongsQuery("");
+const UserFollowedArtist = () => {
+  const { data, isLoading } = useGetUserFollowedArtistQuery("");
   console.log(data);
 
   useEffect(() => {}, []);
@@ -16,4 +16,4 @@ const Tracks = () => {
   );
 };
 
-export default Tracks;
+export default UserFollowedArtist;

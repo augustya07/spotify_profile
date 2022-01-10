@@ -1,45 +1,29 @@
-import react, {useState, useEffect} from "react";
-import {Link} from 'react-router-dom'
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import SettingsIcon from '@mui/icons-material/Settings';
-
-    const {SubMenu} = Menu;
-    const {Header} = Layout;
-
+import react, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { useGetSpotifyUserQuery } from "../service/spotifyApi";
 
 const Nav = () => {
+  const { data, isLoading, isSuccess, isError, error } =
+    useGetSpotifyUserQuery("");
+  const [user, setUser] = useState(null);
+  const [navActive, setNavActive] = useState();
 
-    const [navActive, setNavActive] = useState()
+  console.log(data);
 
-    const handleClick = e => {
-        console.log('click ', e);
-        // this.setState({current: e.key});
-        setNavActive(e.key)
-    };
-    return (
-        <Layout>
-            <Header>
-                <Menu onClick={handleClick} selectedKeys={navActive} mode="horizontal">
-                    <SubMenu key="SubMenu" icon={<SettingOutlined/>} title="Album">
-                        <Menu.ItemGroup title="Item 1">
-                            <Menu.Item key="album"><Link to="/album">Album </Link> </Menu.Item>
-                            <Menu.Item key="tracks"><Link to="/tracks">Tracks </Link> </Menu.Item>
-                        </Menu.ItemGroup>
-                    </SubMenu>
+  // const handleClick = e => {
+  //     console.log('click ', e);
+  //     // this.setState({current: e.key});
+  //     setNavActive(e.key)
+  // };
+  return (
+    <>
+      {isLoading && <div>Loading...</div>}
+      {data && <div>{data.display_name}</div>}
+      Nav
+    </>
+  );
+};
 
-                    <Menu.Item key="mail" icon={<MailOutlined/>}>
-                        <Link to="/recommendations">Recommendation </Link>
-
-                    </Menu.Item>
-
-
-                </Menu>
-
-            </Header>
-
-        </Layout>
-
-    )
-}
-
-export default Nav
+export default Nav;

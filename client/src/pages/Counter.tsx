@@ -27,7 +27,8 @@ const Counter = () => {
               <p>{i.name} </p>
           })}</h1> */}
 
-          <h1> {userInfo.email}</h1>
+<h1> Get</h1>
+          {/* <h1> {userInfo.email}</h1> */}
         </>
       )}
     </>
